@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf8">
+    <meta name="viewport" content="minimal-ui,width=device-width,initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+    <title>Hello Http</title>
+    <script src="vue.js"></script>
+    <script src="vue-resource.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        {{ message }}
+        <button @click="getData()">http get</button><br/>
+        {{ resp }}
+    </div>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                message: 'Hello HTTP!',
+                resp: {}
+            },
+            methods: {
+                getData: function(){
+                    this.$http.get('http://api.baichanghui.com/productservice/places/search', {
+                        params: { city:'北京' }
+                    }).then(function(resp){
+                        console.log(resp.body);
+                        this.resp = resp.body;
+                    });
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

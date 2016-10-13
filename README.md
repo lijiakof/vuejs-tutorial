@@ -121,7 +121,3 @@ In this article ,you can learnning:
     * vue-async-data
     * vue-validator
     * vue-animated-list
-
-
-
-
