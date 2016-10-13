@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf8">
+    <meta name="viewport" content="minimal-ui,width=device-width,initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+    <title>Template Syntax</title>
+    <script src="vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        Text: {{ text }}<br />
+        Raw Html: <span v-html="rawHtml"></span><br />
+        Attributes: <span v-bind:title="attributeTitle">{{ attributeTitle }}</span><br />
+        Expressions: <span>{{ exp + 1}}</span><br />
+        Filters: <span>{{ 'toUpperFilter' | toUpperFilter}}</span><br />
+        Directives: <span v-if="seen">v-if directive</span><br />
+        Modifiers: <a v-on:click.stop="doThis">stop modifiers</a><br />
+        Conditional: <span v-if="seen">v-if directive</span><br />
+        List: <span v-for="n in 10">{{ n }}</span>
+    </div>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                text: 'bind text',
+                rawHtml: '<span>bind html</span>',
+                attributeTitle: 'bind title',
+                exp: 2,
+                seen: true
+            },
+            filters: {
+                toUpperFilter: function(val) {
+                    return val.toUpperCase();
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
