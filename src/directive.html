@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf8">
+    <meta name="viewport" content="minimal-ui,width=device-width,initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+    <title>Directive</title>
+    <script src="vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <span v-custom-directive="message">{{ message }}</span>
+    </div>
+    <script>
+        Vue.directive('custom-directive', {
+            bind: function(el, binding, vnode) {
+                console.log('bind');
+                console.log(el);
+                console.log(binding);
+            },
+            update: function(value) {
+                console.log(value);
+            },
+            unbind: function() {},
+            inserted: function(el) {
+
+            }
+        });
+        Vue.filter('reverse', function (value) {
+            return value.split('').reverse().join('')
+        });
+        var app = new Vue({
+            el: '#app',
+            data: {
+                message: 'Hello Directive!'
+            }
+        });
+    </script>
+</body>
+
+</html>

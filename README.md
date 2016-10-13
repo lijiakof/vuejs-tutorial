@@ -12,6 +12,8 @@ In this article ,you can learnning:
     * Components
 * Advanced
     * Custom Directives
+    * Custom Filters
+    * Mixins
     * Router
     * Plugins
 
@@ -83,7 +85,19 @@ In this article ,you can learnning:
 * Components
 
 ## Advanced
-* Custom Directives
+* [Custom Directives](src/directive.html)
+    * Register: `Vue.directive('custom-directive')`
+    * `v-custom-directive`
+    * Hook Functions
+        * bind
+        * inserted
+        * undate
+        * componentUpdated
+        * unbind
+* Custom Filters
+    * Register: `Vue.filter('customFilters')`
+    * `{{ data | customFilters }}`
+* Mixins
 * Router
 * Plugins
 
