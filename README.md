@@ -83,6 +83,22 @@ In this article ,you can learnning:
     * value bindings
     * modifiers
 * Components
+    * global
+        * register: `Vue.component('custom-component',{})`
+        * `<custom-component></custom-component>`
+    * local
+        * declare: `var child = { template: ''}`
+        * register: `components: { 'child-component': child }`
+        * `<child-component></child-component>`
+    * props
+        * `components: { props: ['message'] }`
+        * `<custom-component message="hello"></custom-component>`
+        * `<custom-component :message="msg"></custom-component>`
+    * parent-child communication
+    * dynamic component
+        * `<component v-bind:is="currentView"></component>`
+    * async component
+        * use webpack's code-splitting
 
 ## Advanced
 * [Custom Directives](src/directive.html)
