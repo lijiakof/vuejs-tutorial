@@ -10,13 +10,22 @@
 
 <body>
     <div id="app">
-        listening:<button></button>
+        listening: <button @click="counter++">Add {{ counter }}</button><br />
+        method event handlers: <button @click="greet('Hello', $event)">Greet</button><br />
+        event modifiers: <a href="http://m.baichanghui.com" @click.prevent="greet('Hello', $event)">.prevent</a><br />
+        key modifiers: <input @keyup.enter="greet('Hello', $event)" type="text" />
     </div>
     <script>
         var app = new Vue({
             el: '#app',
             data: {
-                message: 'Hello Vue!'
+                counter: 0,
+            },
+            methods: {
+                greet: function(msg, e) {
+                    alert(msg);
+                    console.log(e);
+                }
             }
         });
     </script>

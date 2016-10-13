@@ -1,6 +1,7 @@
 # Vue Tutorial
+In this article ,you can learnning:
 
-* Install
+* How to install Vue.js
 * ABC
     * Hello Vue
     * Vue Instance
@@ -14,7 +15,7 @@
     * Router
     * Plugins
 
-## Install
+## How to install Vue.js
 * Stanalone
     * [dev version](http://vuejs.org/js/vue.js)
     * [pro version](http://vuejs.org/js/vue.min.js)
@@ -39,7 +40,7 @@
         * mounted
         * updated
         * destroyed
-* Template Syntax & Data Binding
+* [Template Syntax & Data Binding](src/syntax.html)
     * text: `<span>{{ msg }}</span>`
     * raw html: `<span v-html="rawHtml"></span>`
     * attributes: `<span v-bind:title="title"></span>` shorthand `<span :id="title"></span>`
@@ -52,7 +53,7 @@
     * conditional rendering: `v-if`, `v-else`, `v-show`
     * list rendering: `v-for`
 * Computed Properties & Watchers
-* Event
+* [Event](src/event.html)
     * listening
     * method event handlers
     * event modifiers
@@ -72,7 +73,19 @@
         * .left
         * .right
         * `Vue.config.keyCodes.f1 = 112`
+* [Forms](src/forms.html)
+    * text
+    * checkbox
+    * radio
+    * select
+    * value bindings
+    * modifiers
+* Components
 
+## Advanced
+* Custom Directives
+* Router
+* Plugins
 
 
 
