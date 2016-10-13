@@ -82,7 +82,7 @@ In this article ,you can learnning:
     * select
     * value bindings
     * modifiers
-* Components
+* [Components](src/components.html)
     * global
         * register: `Vue.component('custom-component',{})`
         * `<custom-component></custom-component>`
@@ -102,9 +102,9 @@ In this article ,you can learnning:
 
 ## Advanced
 * [Custom Directives](src/directive.html)
-    * Register: `Vue.directive('custom-directive')`
+    * register: `Vue.directive('custom-directive')`
     * `v-custom-directive`
-    * Hook Functions
+    * hook functions
         * bind
         * inserted
         * undate
@@ -116,6 +116,11 @@ In this article ,you can learnning:
 * Mixins
 * Router
 * Plugins
+    * vue-router
+    * vue-resource
+    * vue-async-data
+    * vue-validator
+    * vue-animated-list
 
 
 
