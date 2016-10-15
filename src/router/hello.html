@@ -21,7 +21,15 @@
             template: '<div>foo</div>'
         };
         var Bar = {
-            template: '<div>bar {{ $route.params.id}}</div>'
+            template: '<div @click="good">bar {{ $route.params.id}} {{ name }}</div>',
+            data: function() {
+                return {name: 'jay'}
+            },
+            methods: {
+                good: function(){
+                    console.log('click')
+                }
+            }
         };
         var routes = [
             { path: '/foo', component: Foo},

@@ -16,8 +16,13 @@
     </div>
     <script>
         Vue.component('my-component', {
-            template: '<div>Hello Component {{message}}</div>',
-            props: ['message']
+            template: '<div>Hello Component {{message}} {{name}}</div>',
+            props: ['message'],
+            data: function(){
+                return {
+                    name: 'abc'
+                }
+            }
         });
         var Child = {
             template: '<div>Child Component</div>'

@@ -94,6 +94,8 @@ In this article ,you can learnning:
         * `components: { props: ['message'] }`
         * `<custom-component message="hello"></custom-component>`
         * `<custom-component :message="msg"></custom-component>`
+    * data must be a Function
+    * methods are same as Vue instance
     * parent-child communication
     * dynamic component
         * `<component v-bind:is="currentView"></component>`
@@ -115,6 +117,32 @@ In this article ,you can learnning:
     * `{{ data | customFilters }}`
 * Mixins
 * Router
+    * how to use:
+        * create `<router-view></router-view>` template
+        * create child components
+        * declare routes
+        * create VueRouter instance
+        * insert router to Vue instance
+    * dynamic matching
+    * navigation
+        * router.push('');
+        * router.push({ path: '', query: { key: 'value'}})
+        * router.go(1)
+    * redirect & alias
+    * h5 history mode
+    * navigation hook
+        * global
+            * beforeEach
+            * afterEach
+        * router
+            * beforeEnter
+            * afterEach
+        * component
+            * beforeRouteEnter
+            * beforeRouteLeave
+    * fetch data
+    * lazy loading
+        
 * Plugins
     * vue-router
     * vue-resource
