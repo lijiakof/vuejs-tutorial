@@ -10,7 +10,7 @@
 
 <body>
     <div id="app">
-        <span v-custom-directive="message">{{ message }}</span>
+        <span v-custom-directive="message">{{ message | reverse }}</span>
     </div>
     <script>
         Vue.directive('custom-directive', {

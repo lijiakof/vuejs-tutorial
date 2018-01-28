@@ -39,6 +39,7 @@ In this article ,you can learnning:
     * properties & methods
     * instance lifecycle hooks
         * created
+        * beforeMounted
         * mounted
         * updated
         * destroyed

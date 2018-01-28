@@ -13,8 +13,18 @@
         {{ message }}
         <my-component message="haha"></my-component>
         <child-component></child-component>
+        <aa></aa>
     </div>
     <script>
+        var ext = Vue.extend({
+            data:function () {
+                return {
+                    msg: 'abc'
+                }
+            },
+            template: '<div>Hello Component {{msg}}</div>'
+        });
+         Vue.component("aa", ext);
         Vue.component('my-component', {
             template: '<div>Hello Component {{message}} {{name}}</div>',
             props: ['message'],
